@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: Verdana,Tahoma, sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg,#ff0 50%, #333 50%);
+
+}
+.container{
+    width: 360px;
+    padding: 33px;
+    text-align: center;
+    background-color: rgb(173, 173, 173);
+    
+}
+.inputs{
+    display: flex;
+    width: 270px;
+    background: #fff;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0,0,0.5);
+    padding: 10px;
+}
+button{
+width: 60px;
+height: 50px;
+background-color: #333;
+color: aliceblue;
+border: none;
+outline: none;
+border-radius: 2px;
+margin: 0 5px;
+cursor: pointer;
+
+}
+#input{
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #666;
+    color: #fff;
+    padding:10px;
+
+}
+#input::placeholder{
+    color: #bbb;
+}.text{
+    margin-top: 10px;
+}
+
+.text ul{
+    position: relative;
+    background-color: #666;
+    color: aliceblue;
+    font-size: 19px;
+    text-align: left;
+    padding: 8px;
+
+}
+.text ul i{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+.text ul .edit{
+    color: aliceblue;
+    cursor: pointer;
+}

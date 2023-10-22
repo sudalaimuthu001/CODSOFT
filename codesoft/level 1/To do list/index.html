@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container">
+        <h1>TO-DO LIST</h1>
+        <div class="inputs">
+        <input type="text" id="input" placeholder="Enter a text">
+        <button onclick="add()">ADD</button>
+        </div>
+        <div class="text">
+        </div>
+    </div>
+
+ 
+    
+</body>
+
+<script>
+
+
+    let inputs = document.getElementById("input");
+    let text   = document.querySelector(".text");
+
+
+    function add()
+    {
+        if (inputs.value == ""){
+            alert("Please Enter the Value");
+        }
+        else{
+            let newlist = document.createElement("ul");
+            newlist.innerHTML=`${inputs.value}  <i class="fa-solid fa-trash"></i>`;
+            text.appendChild(newlist);
+            inputs.value="";
+            
+            newlist.querySelector("i").addEventListener("click" , remove);
+            function remove(){
+                newlist.remove();
+            }
+        }
+
+       
+    }
+</script>
+</html>
